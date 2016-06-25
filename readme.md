@@ -10,8 +10,25 @@ $ npm install --save @joegesualdo/promise-queue
 ```javascript
 var PromiseQueue = require("@joegesualdo/promise-queue").default
 
+// Create Test Promises
+let promises = [];
+promises.push(function(results) {
+  return new Promise((resolve, reject) => {
+    results.name = 'joe';
+    resolve(results)
+  })
+})
+promises.push(function(results) {
+  return new Promise((resolve, reject) => {
+    results.age = 22
+    resolve(results)
+  })
+})
+
+// Initailize the PromiseQueue with an array of promises
 promiseQueue = new PromiseQueue(promises)
 
+// Run all the promises syncronously.
 promiseQueue.run({})
 .then(function(results){
   console.log(results)
@@ -35,6 +52,21 @@ Returns: `PromiseQueue`
 ```javascript
 var PromiseQueue = require("@joegesualdo/promise-queue").default
 
+// Create Test Promises
+let promises = [];
+promises.push(function(results) {
+  return new Promise((resolve, reject) => {
+    results.name = 'joe';
+    resolve(results)
+  })
+})
+promises.push(function(results) {
+  return new Promise((resolve, reject) => {
+    results.age = 22
+    resolve(results)
+  })
+})
+
 promiseQueue = new PromiseQueue(promises)
 ```
 ### `run(startingObj)`
@@ -47,8 +79,25 @@ promiseQueue = new PromiseQueue(promises)
 ```javascript
 var PromiseQueue = require("@joegesualdo/promise-queue").default
 
+// Create Test Promises
+let promises = [];
+promises.push(function(results) {
+  return new Promise((resolve, reject) => {
+    results.name = 'joe';
+    resolve(results)
+  })
+})
+promises.push(function(results) {
+  return new Promise((resolve, reject) => {
+    results.age = 22
+    resolve(results)
+  })
+})
+
+// Initailize the PromiseQueue with an array of promises
 promiseQueue = new PromiseQueue(promises)
 
+// Run all the promises syncronously.
 promiseQueue.run({})
 .then(function(results){
   console.log(results)
