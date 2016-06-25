@@ -59,7 +59,6 @@ module.exports =
 	  function PromiseQueue(promiseArray) {
 	    _classCallCheck(this, PromiseQueue);
 
-	    console.log('woooo');
 	    this.promiseArray = promiseArray;
 	  }
 
@@ -68,7 +67,6 @@ module.exports =
 	    value: function run(startObj) {
 	      var _this = this;
 
-	      console.log(startObj);
 	      return new Promise(function (resolve, reject) {
 	        var that = _this;
 	        var currentIndex = 0;

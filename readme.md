@@ -1,15 +1,9 @@
 ## promise-queue [![Build Status](https://travis-ci.org/joegesualdo/promise-queue-js.svg?branch=master)](https://travis-ci.org/joegesualdo/promise-queue-js)
 > Syncronously run promises.
 
-## Highlights
-
-- Highlight 1
-- Highlight 2
-- Highlight 3
-
 ## Install
 ```
-$ npm install --save @joegesualdo/promise-queue 
+$ npm install --save @joegesualdo/promise-queue
 ```
 
 ## Usage
@@ -18,11 +12,10 @@ var PromiseQueue = require("@joegesualdo/promise-queue").default
 
 promiseQueue = new PromiseQueue(promises)
 
-promiseQueue.run()
+promiseQueue.run({})
 .then(function(results){
   console.log(results)
 })
-// insert code example here
 ```
 
 ## Test
@@ -30,28 +23,40 @@ promiseQueue.run()
 $ npm test
 ```
 ## API
-### `methodName(arg1, arg2)`
-> What does this method do?
+### `constructor(promises)`
+> Initializes a new PromiseQueue 
 
 | Name | Type | Description |
 |------|------|-------------|
-| arg1 | `Array` | Test description|
-| arg2 | `String` | Test description|
+| promises | `Array<Promise>` | Array of promises you want to run | 
 
-Returns: `Array`, of things
+Returns: `PromiseQueue` 
 
 ```javascript
-var @joegesualdo/promiseQueue = require("@joegesualdo/promise-queue").default
+var PromiseQueue = require("@joegesualdo/promise-queue").default
 
-// insert method example here
+promiseQueue = new PromiseQueue(promises)
+```
+### `run(startingObj)`
+> Runs the promises in the order they appear in the array.
+
+| Name | Type | Description |
+|------|------|-------------|
+| startingObj | `Object` | The object that will be passed to the first promise;
+
+```javascript
+var PromiseQueue = require("@joegesualdo/promise-queue").default
+
+promiseQueue = new PromiseQueue(promises)
+
+promiseQueue.run({})
+.then(function(results){
+  console.log(results)
+})
 ```
 ## Build
 ```
 $ npm run build
 ```
-
-## Related
-- [example-package]() - Add description of the example package here.
-
 ## License
 MIT © [Joe Gesualdo]()
