@@ -1,4 +1,4 @@
-## @joegesualdo/promise-queue [![Build Status](https://travis-ci.org/joegesualdo/promise-queue-js.svg?branch=master)](https://travis-ci.org/joegesualdo/promise-queue-js)
+## promise-queue [![Build Status](https://travis-ci.org/joegesualdo/promise-queue-js.svg?branch=master)](https://travis-ci.org/joegesualdo/promise-queue-js)
 > Syncronously run promises.
 
 ## Highlights
@@ -14,8 +14,14 @@ $ npm install --save @joegesualdo/promise-queue
 
 ## Usage
 ```javascript
-var @joegesualdo/promiseQueue = require("@joegesualdo/promise-queue").default
+var PromiseQueue = require("@joegesualdo/promise-queue").default
 
+promiseQueue = new PromiseQueue(promises)
+
+promiseQueue.run()
+.then(function(results){
+  console.log(results)
+})
 // insert code example here
 ```
 
