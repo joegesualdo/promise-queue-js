@@ -1,7 +1,7 @@
 {
   "name": "@joegesualdo/promise-queue",
   "repository": "joegesualdo/promise-queue-js",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Syncronously run promises.",
   "main": "./dist/index.js",
   "scripts": {
